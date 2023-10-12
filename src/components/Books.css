@@ -1,0 +1,45 @@
+.container__content {
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.container {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.container__content__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    flex: 0 0 calc(25%- 10px); 
+    margin: 5px;
+    
+}
+
+.container__content__item img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    
+}
+
+.book__title, .book__author {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+
+.btn {
+    width: 40%;
+    background-color: rgb(139, 103, 173);
+    padding: 10px;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+
