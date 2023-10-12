@@ -1,0 +1,13 @@
+.container_book_item--detail img {
+  width: 200px;
+  height: 200px;
+}
+
+.container__book--detail {
+  margin-left: 200px;
+  display: flex;
+  flex-direction: row;
+}
+.container_book_item--detail {
+  margin-right: 20px;
+}
