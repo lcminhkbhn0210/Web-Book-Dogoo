@@ -10,6 +10,7 @@ import CssBook from './components/CssBook';
 import JsBook from './components/JsBook';
 import ReactBook from './components/ReactBook';
 import NodeBook from './components/NodeBook';
+import BookDetail from './components/BookDetail';
 
 const router = createBrowserRouter([
   {path: "/",element: <App/>, children: [
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
     {path: 'js', element: <JsBook/>},
     {path: 'react', element: <ReactBook/>},
     {path: 'node', element: <NodeBook/>},
+    {path: 'books/:id', element: <BookDetail/>}
   ]}
 ])
 

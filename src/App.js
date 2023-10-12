@@ -6,8 +6,6 @@ import { Outlet } from 'react-router-dom';
 function App() {
   const categories = ["NODE", "REACT", "JS", "CSS", "HTML"];
 
-
-
   return (
     <div>
       <Header categories={categories}/>

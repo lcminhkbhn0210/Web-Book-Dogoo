@@ -1,6 +1,11 @@
 import BookItem from './BookItem';
 import './Books.css'
+import { useNavigate } from 'react-router-dom';
 function Books(props) {
+    const clickDetailHandle = e => {
+        
+    }
+
     return(
         <div className="container">
             <div className="container__title">
@@ -11,7 +16,7 @@ function Books(props) {
 
             <div className="container__content">
                 {props.books.map(book => {
-                    return <BookItem key={book.id} book={book}/>
+                    return <BookItem clickDetail ={clickDetailHandle} key={book.id} book={book}/>
                 })}
             </div>
         </div>
