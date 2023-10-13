@@ -13,7 +13,6 @@ function Books(props) {
   };
 
   const renderButton = () => {
-    {
       let html = [];
       for (let i = 0; i < Math.ceil(props.books.length / itemsPerPage); i++) {
         html.push(
@@ -28,7 +27,6 @@ function Books(props) {
         );
       }
       return html;
-    }
   };
 
   const currentBooks = props.books.slice(
