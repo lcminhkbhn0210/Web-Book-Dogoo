@@ -1,6 +1,5 @@
 import BookItem from './BookItem';
 import './Books.css'
-import { useNavigate } from 'react-router-dom';
 function Books(props) {
     const clickDetailHandle = e => {
         
