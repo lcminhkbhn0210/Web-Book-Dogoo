@@ -20,7 +20,7 @@ function Books(props) {
             onClick={() => changePage(i + 1)}
             key={i}
             value={i + 1}
-            className="btn__pagination"
+            className={`btn__pagination ${currentPage === i+1 ? "btn--active" : undefined}`}
           >
             {i + 1}
           </button>

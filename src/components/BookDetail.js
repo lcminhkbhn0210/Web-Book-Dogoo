@@ -9,22 +9,27 @@ function BookDetail() {
   const [book, getBook] = useState("");
   const [content, getContent] = useState("");
 
+  const convertString = (string) =>{
+    if(string === undefined) return;
+    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+  }
+
   useEffect(() => {
     axios.get("http://localhost:3001/books").then((response) => {
       getBook(response.data[id - 1]);
     });
-  }, []);
+  },[id]);
 
   useEffect(() => {
     axios.get("../../content.txt").then((response) => {
       getContent(response.data);
     });
-  }, []);
+  },[]);
   return (
     <React.Fragment>
       <div className="container__book--detail">
         <div className="container_book_item--detail">
-          <img src="../../Html_book--1.jpg" alt="Anh" />
+          <img src={`../../${convertString(book.type)}_book--${book.id>=10 ? `${book.id % 10 + 1}` : book.id}.jpg`} alt="Anh" />
         </div>
         <div className="container_book_item--detail">
           <strong className="title">{book.title}</strong>
